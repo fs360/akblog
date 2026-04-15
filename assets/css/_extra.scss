@@ -1,0 +1,20 @@
+.hero {
+  margin-bottom: 1rem;
+}
+
+.app-header-title {
+  font-size: 1.2em;
+}
+
+.hero-tagline {
+  color: $light-color;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}

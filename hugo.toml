@@ -1,0 +1,44 @@
+baseURL = 'https://adamkliarsky.blog/'
+languageCode = 'en-us'
+title = 'Below the Attack Surface: Security Research for Fun and Profit'
+theme = 'hugo-theme-m10c'
+
+[taxonomies]
+  tag = 'tags'
+  series = 'series'
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 2
+  [[menu.main]]
+    identifier = "series"
+    name = "Series"
+    url = "/series/"
+    weight = 3
+
+[params]
+  author = "Adam"
+  description = "A personal knowledge base of things I'm learning, researching, and testing."
+  avatar = "/82nd_punisher-skull.png"
+  heroImage = "/hero1.png"
+  heroImageAlt = "Below the Attack Surface - submarine in cyber ocean"
+  [[params.social]]
+    icon = "brand-x"
+    name = "X"
+    url = "https://x.com/fs360"
+  [[params.social]]
+    icon = "brand-github"
+    name = "GitHub"
+    url = "https://github.com/fs360"
+  [[params.social]]
+    icon = "brand-linkedin"
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/in/adamkliarsky/"

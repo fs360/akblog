@@ -1,0 +1,24 @@
+{{ define "main" }}
+  <div class="hero">
+    <img class="hero-image" src="{{ .Site.Params.heroImage | default "/hero.jpg" }}" alt="{{ .Site.Params.heroImageAlt | default "Hero image" }}" />
+  </div>
+  <article>
+    <p class="hero-tagline">{{ .Site.Params.description }}</p>
+    <h3>Recent Posts</h3>
+    <ul class="posts-list">
+      {{ range where .Paginator.Pages "Type" "!=" "page" }}
+        <li class="posts-list-item">
+          <a class="posts-list-item-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <span class="posts-list-item-description">
+            {{ partial "icon.html" (dict "ctx" $ "name" "calendar") }}
+            {{ .PublishDate.Format "Jan 2, 2006" }}
+            <span class="posts-list-item-separator">-</span>
+            {{ partial "icon.html" (dict "ctx" $ "name" "clock") }}
+            {{ .ReadingTime }} min read
+          </span>
+        </li>
+      {{ end }}
+    </ul>
+    {{ partial "pagination.html" $ }}
+  </article>
+{{ end }}
